@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Information</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #e6f0fa;
+      color: #00264d;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0073cf;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .container h2 {
+      font-size: 2.2rem;
+      color: #0073cf;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #0073cf;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-home:hover {
+      background-color: #005fa3;
+    }
+    footer {
+      background-color: #00264d;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Web Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>Information About Our Services</h2>
+    <p>
+      Welcome to our information page! Here you can provide detailed explanations of your services, pricing, and what clients can expect when working with you.
+    </p>
+    <p>
+      Use this page to describe your process, terms, or additional resources your clients might need before purchasing. You can include as much text as you like, add bullet lists, or insert images to make it more engaging.
+    </p>
+    <p>
+      Example topics to include:
+      <ul>
+        <li>How our services work</li>
+        <li>Payment and refund policy</li>
+        <li>Expected delivery times</li>
+        <li>Contact details and support availability</li>
+      </ul>
+    </p>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+  <footer>
+    &copy; 2025 My Web Services. All rights reserved.
+  </footer>
+</body>
+</html>
