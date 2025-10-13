@@ -14,8 +14,8 @@
     }
 
     body {
-      background: linear-gradient(135deg, #cce4f9, #e6f0fa); /* light blue gradient */
-      color: #00264d;
+      background-color: #e6f0fa; /* light blue */
+      color: #00264d; /* dark blue text */
       line-height: 1.6;
     }
 
@@ -58,11 +58,9 @@
       color: #ffdd57;
     }
 
-    /* Drop-down menu */
+    /* Drop-down menu style */
     nav ul li ul {
-      display: block;
-      opacity: 0;
-      visibility: hidden;
+      display: none;
       position: absolute;
       top: 100%;
       left: 0;
@@ -70,12 +68,11 @@
       padding: 0.5rem 0;
       border-radius: 0 0 5px 5px;
       min-width: 150px;
-      transition: opacity 0.3s;
+      z-index: 10;
     }
 
     nav ul li:hover ul {
-      opacity: 1;
-      visibility: visible;
+      display: block;
     }
 
     nav ul li ul li {
@@ -122,7 +119,6 @@
       width: 300px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
     }
 
     .service-card:hover {
@@ -142,29 +138,19 @@
       color: #00264d;
     }
 
-    .service-card button {
+    .service-card a {
       display: inline-block;
       padding: 0.8rem 1.5rem;
       background-color: #0073cf;
       color: white;
-      border: none;
+      text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
-      cursor: pointer;
       transition: background 0.3s;
     }
 
-    .service-card button:hover {
+    .service-card a:hover {
       background-color: #005fa3;
-    }
-
-    .result {
-      margin-top: 3rem;
-      font-size: 5rem;
-      font-weight: 900;
-      color: #0073cf;
-      text-align: center;
-      display: none;
     }
 
     footer {
@@ -181,28 +167,7 @@
         align-items: center;
       }
     }
-
-    @media (max-width: 600px) {
-      .intro h2 {
-        font-size: 2rem;
-      }
-      .intro p {
-        font-size: 1rem;
-      }
-      .service-card {
-        width: 90%;
-      }
-    }
-
-    /* Optional icons for services */
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #0073cf;
-    }
   </style>
-  <!-- Include Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Header -->
@@ -231,45 +196,30 @@
     <div class="services">
       <!-- Service 1 -->
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-phone"></i></div>
         <h3>Make Calls</h3>
         <p>We make professional calls for your business or personal needs.</p>
-        <button onclick="showNumber()">Go</button>
+        <a href="8364.html">Go</a>
       </div>
 
       <!-- Service 2 -->
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-envelope"></i></div>
         <h3>Write Letters</h3>
         <p>Custom letters crafted to convey your message professionally.</p>
-        <button onclick="showNumber()">Go</button>
+        <a href="8364.html">Go</a>
       </div>
 
       <!-- Service 3 -->
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
         <h3>Write CV</h3>
         <p>Professional CV writing to help you land your dream job.</p>
-        <button onclick="showNumber()">Go</button>
+        <a href="8364.html">Go</a>
       </div>
     </div>
-
-    <!-- Dynamic Result -->
-    <div class="result" id="result">8364</div>
   </div>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 My Web Services | Email: info@mywebservices.com
+    &copy; 2025 My Web Services. All rights reserved.
   </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function showNumber() {
-      const result = document.getElementById('result');
-      result.style.display = 'block';
-      result.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
