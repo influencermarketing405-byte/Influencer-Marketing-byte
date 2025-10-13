@@ -3,39 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service Page</title>
+  <title>Professional Web Services</title>
   <style>
-    body {
+    /* Reset */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #e6f0fa; /* light blue */
-      color: #00264d; /* dark blue */
+    }
+
+    body {
+      background: linear-gradient(135deg, #cce4f9, #e6f0fa); /* light blue gradient */
+      color: #00264d;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0073cf;
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    /* Drop-down menu */
+    nav ul li ul {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0073cf;
+      padding: 0.5rem 0;
+      border-radius: 0 0 5px 5px;
+      min-width: 150px;
+      transition: opacity 0.3s;
+    }
+
+    nav ul li:hover ul {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    nav ul li ul li {
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
       text-align: center;
     }
 
-    .number-container {
+    .intro {
+      margin-bottom: 3rem;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      color: #00264d;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .service-card {
       background-color: white;
-      padding: 4rem 6rem;
-      border-radius: 15px;
+      border-radius: 10px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      font-size: 6rem;
-      font-weight: 900;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
       color: #0073cf;
     }
 
-    @media (max-width: 600px) {
-      .number-container {
-        padding: 2rem 3rem;
-        font-size: 4rem;
+    .service-card p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #00264d;
+    }
+
+    .service-card button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #0073cf;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .service-card button:hover {
+      background-color: #005fa3;
+    }
+
+    .result {
+      margin-top: 3rem;
+      font-size: 5rem;
+      font-weight: 900;
+      color: #0073cf;
+      text-align: center;
+      display: none;
+    }
+
+    footer {
+      background-color: #00264d;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
       }
     }
+
+    @media (max-width: 600px) {
+      .intro h2 {
+        font-size: 2rem;
+      }
+      .intro p {
+        font-size: 1rem;
+      }
+      .service-card {
+        width: 90%;
+      }
+    }
+
+    /* Optional icons for services */
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #0073cf;
+    }
   </style>
+  <!-- Include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="number-container">8364</div>
+  <!-- Header -->
+  <header>
+    <h1>My Web Services</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Gallery</a>
+          <ul>
+            <li><a href="#">Photos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="intro">
+      <h2>Professional Web Services</h2>
+      <p>We offer high-quality digital assistance to help you save time and look professional online.</p>
+    </div>
+
+    <div class="services">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-phone"></i></div>
+        <h3>Make Calls</h3>
+        <p>We make professional calls for your business or personal needs.</p>
+        <button onclick="showNumber()">Go</button>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Write Letters</h3>
+        <p>Custom letters crafted to convey your message professionally.</p>
+        <button onclick="showNumber()">Go</button>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Write CV</h3>
+        <p>Professional CV writing to help you land your dream job.</p>
+        <button onclick="showNumber()">Go</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Result -->
+    <div class="result" id="result">8364</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 My Web Services | Email: info@mywebservices.com
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showNumber() {
+      const result = document.getElementById('result');
+      result.style.display = 'block';
+      result.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
