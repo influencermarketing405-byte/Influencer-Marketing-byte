@@ -43,41 +43,37 @@
     /* 4x4 grid of squares */
     .square-grid {
       display: grid;
-      grid-template-columns: repeat(4, 100px); /* slightly taller to fit title */
-      grid-template-rows: repeat(4, 120px);    /* extra height for title */
+      grid-template-columns: repeat(4, 70px);
       gap: 1rem;
       justify-content: center;
       padding: 3rem;
     }
 
     .square {
-      width: 100px;
-      height: 120px; /* height includes title area */
+      width: 70px;
+      height: 70px;
       border: 1px solid black;
-      border-radius: 0; 
+      border-radius: 0;
       overflow: hidden;
       transition: transform 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
       background-color: #fff;
     }
 
     .square img {
       width: 100%;
-      height: 100px; /* image portion */
+      height: 100%;
       object-fit: cover;
-    }
-
-    .square p {
-      margin: 2px 0 0 0;
-      font-size: 0.8rem;
-      text-align: center;
     }
 
     .square:hover {
       transform: translateY(-3px);
+    }
+
+    /* Titles under the squares */
+    .square-title {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
     }
   </style>
 </head>
@@ -86,74 +82,74 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- 4x4 Grid of Squares with Images and Titles -->
+  <!-- 4x4 Grid of Squares -->
   <section class="square-grid">
-    <div class="square">
-      <img src="https://picsum.photos/100?random=1" alt="Random Image 1">
-      <p>Title 1</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=1" alt="Random Image 1"></div>
+      <div class="square-title">Title 1</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=2" alt="Random Image 2">
-      <p>Title 2</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=2" alt="Random Image 2"></div>
+      <div class="square-title">Title 2</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=3" alt="Random Image 3">
-      <p>Title 3</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=3" alt="Random Image 3"></div>
+      <div class="square-title">Title 3</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=4" alt="Random Image 4">
-      <p>Title 4</p>
-    </div>
-
-    <div class="square">
-      <img src="https://picsum.photos/100?random=5" alt="Random Image 5">
-      <p>Title 5</p>
-    </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=6" alt="Random Image 6">
-      <p>Title 6</p>
-    </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=7" alt="Random Image 7">
-      <p>Title 7</p>
-    </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=8" alt="Random Image 8">
-      <p>Title 8</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=4" alt="Random Image 4"></div>
+      <div class="square-title">Title 4</div>
     </div>
 
-    <div class="square">
-      <img src="https://picsum.photos/100?random=9" alt="Random Image 9">
-      <p>Title 9</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=5" alt="Random Image 5"></div>
+      <div class="square-title">Title 5</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=10" alt="Random Image 10">
-      <p>Title 10</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=6" alt="Random Image 6"></div>
+      <div class="square-title">Title 6</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=11" alt="Random Image 11">
-      <p>Title 11</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=7" alt="Random Image 7"></div>
+      <div class="square-title">Title 7</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=12" alt="Random Image 12">
-      <p>Title 12</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=8" alt="Random Image 8"></div>
+      <div class="square-title">Title 8</div>
     </div>
 
-    <div class="square">
-      <img src="https://picsum.photos/100?random=13" alt="Random Image 13">
-      <p>Title 13</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=9" alt="Random Image 9"></div>
+      <div class="square-title">Title 9</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=14" alt="Random Image 14">
-      <p>Title 14</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=10" alt="Random Image 10"></div>
+      <div class="square-title">Title 10</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=15" alt="Random Image 15">
-      <p>Title 15</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=11" alt="Random Image 11"></div>
+      <div class="square-title">Title 11</div>
     </div>
-    <div class="square">
-      <img src="https://picsum.photos/100?random=16" alt="Random Image 16">
-      <p>Title 16</p>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=12" alt="Random Image 12"></div>
+      <div class="square-title">Title 12</div>
+    </div>
+
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=13" alt="Random Image 13"></div>
+      <div class="square-title">Title 13</div>
+    </div>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=14" alt="Random Image 14"></div>
+      <div class="square-title">Title 14</div>
+    </div>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=15" alt="Random Image 15"></div>
+      <div class="square-title">Title 15</div>
+    </div>
+    <div>
+      <div class="square"><img src="https://picsum.photos/70?random=16" alt="Random Image 16"></div>
+      <div class="square-title">Title 16</div>
     </div>
   </section>
 </body>
