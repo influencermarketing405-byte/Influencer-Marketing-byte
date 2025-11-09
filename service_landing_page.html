@@ -40,44 +40,26 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    /* Product grid */
-    .product-section {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      background-color: #fff;
+    /* 4 squares in a row */
+    .square-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 3rem;
     }
 
-    .product-card {
-      aspect-ratio: 1 / 1; /* makes it a perfect square */
+    .square {
+      width: 120px;
+      height: 120px;
       border: 1px solid black;
       border-radius: 0; /* sharp corners */
       background-color: transparent;
       transition: transform 0.2s ease;
     }
 
-    .product-card:hover {
+    .square:hover {
       transform: translateY(-3px);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1200px) {
-      .product-section {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .product-section {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .product-section {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -86,24 +68,12 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- Empty 4x4 Grid -->
-  <section class="product-section">
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
-    <div class="product-card"></div>
+  <!-- 4 Squares -->
+  <section class="square-row">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
   </section>
 </body>
 </html>
