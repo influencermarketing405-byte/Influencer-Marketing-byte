@@ -40,12 +40,13 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    /* 4 squares in a row */
-    .square-row {
-      display: flex;
+    /* 4x4 grid of squares */
+    .square-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 100px); /* 4 squares per row */
+      grid-template-rows: repeat(4, 100px);    /* 4 rows */
+      gap: 1rem; /* space between squares */
       justify-content: center;
-      align-items: center;
-      gap: 1rem; /* reduced gap for smaller squares */
       padding: 3rem;
     }
 
@@ -68,8 +69,23 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- 4 Squares -->
-  <section class="square-row">
+  <!-- 4x4 Grid of Squares -->
+  <section class="square-grid">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    
     <div class="square"></div>
     <div class="square"></div>
     <div class="square"></div>
