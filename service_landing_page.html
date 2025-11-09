@@ -50,9 +50,9 @@
     }
 
     .product-card {
+      aspect-ratio: 1 / 1; /* makes it a perfect square */
       border: 1px solid black;
-      border-radius: 8px;
-      height: 200px;
+      border-radius: 0; /* sharp corners */
       background-color: transparent;
       transition: transform 0.2s ease;
     }
@@ -61,7 +61,7 @@
       transform: translateY(-3px);
     }
 
-    /* Responsive behavior */
+    /* Responsive adjustments */
     @media (max-width: 1200px) {
       .product-section {
         grid-template-columns: repeat(3, 1fr);
@@ -86,9 +86,8 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- Empty Product Grid -->
+  <!-- Empty 4x4 Grid -->
   <section class="product-section">
-    <!-- 16 Empty Spaces -->
     <div class="product-card"></div>
     <div class="product-card"></div>
     <div class="product-card"></div>
