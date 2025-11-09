@@ -40,19 +40,19 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    /* 4x4 grid of squares */
+    /* 4x4 grid of smaller squares */
     .square-grid {
       display: grid;
-      grid-template-columns: repeat(4, 100px); /* 4 squares per row */
-      grid-template-rows: repeat(4, 100px);    /* 4 rows */
-      gap: 1rem; /* space between squares */
+      grid-template-columns: repeat(4, 70px); /* 4 squares per row */
+      grid-template-rows: repeat(4, 70px);    /* 4 rows */
+      gap: 0.8rem; /* slightly smaller gap */
       justify-content: center;
       padding: 3rem;
     }
 
     .square {
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 70px;
       border: 1px solid black;
       border-radius: 0; /* sharp corners */
       background-color: transparent;
@@ -69,7 +69,7 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- 4x4 Grid of Squares -->
+  <!-- 4x4 Grid of Smaller Squares -->
   <section class="square-grid">
     <div class="square"></div>
     <div class="square"></div>
