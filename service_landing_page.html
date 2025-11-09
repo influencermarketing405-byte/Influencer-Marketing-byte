@@ -5,16 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arturo.</title>
 
-  <style>
-    @font-face {
-      font-family: 'MoMo Signature';
-      src: url('MoMoSignature-Regular.woff2') format('woff2'),
-           url('MoMoSignature-Regular.woff') format('woff'),
-           url('MoMoSignature-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
+  <!-- Google Fonts: MoMo Signature -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
 
+  <style>
     body {
       margin: 0;
       background-color: white;
@@ -26,12 +22,18 @@
       display: flex;
       align-items: center;
       padding-left: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Font class */
+    .momo-signature-regular {
+      font-family: "Momo Signature", cursive;
+      font-weight: 400;
+      font-style: normal;
     }
 
     .logo {
       color: white;
-      font-family: 'MoMo Signature', cursive;
       font-size: 4rem;
       letter-spacing: 1px;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -40,7 +42,7 @@
 </head>
 <body>
   <div class="top-stripe">
-    <div class="logo">Arturo.</div>
+    <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 </body>
 </html>
