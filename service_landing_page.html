@@ -40,12 +40,12 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    /* 4x4 grid of smaller squares */
+    /* 4x4 grid of squares */
     .square-grid {
       display: grid;
       grid-template-columns: repeat(4, 70px); /* 4 squares per row */
       grid-template-rows: repeat(4, 70px);    /* 4 rows */
-      gap: 0.8rem; /* slightly smaller gap */
+      gap: 0.8rem;
       justify-content: center;
       padding: 3rem;
     }
@@ -55,8 +55,14 @@
       height: 70px;
       border: 1px solid black;
       border-radius: 0; /* sharp corners */
-      background-color: transparent;
+      overflow: hidden; /* ensures image fits inside */
       transition: transform 0.2s ease;
+    }
+
+    .square img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fill square completely */
     }
 
     .square:hover {
@@ -69,27 +75,27 @@
     <div class="logo momo-signature-regular">Arturo.</div>
   </div>
 
-  <!-- 4x4 Grid of Smaller Squares -->
+  <!-- 4x4 Grid of Squares with Images -->
   <section class="square-grid">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=1" alt="Random Image 1"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=2" alt="Random Image 2"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=3" alt="Random Image 3"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=4" alt="Random Image 4"></div>
+
+    <div class="square"><img src="https://picsum.photos/100?random=5" alt="Random Image 5"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=6" alt="Random Image 6"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=7" alt="Random Image 7"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=8" alt="Random Image 8"></div>
+
+    <div class="square"><img src="https://picsum.photos/100?random=9" alt="Random Image 9"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=10" alt="Random Image 10"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=11" alt="Random Image 11"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=12" alt="Random Image 12"></div>
+
+    <div class="square"><img src="https://picsum.photos/100?random=13" alt="Random Image 13"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=14" alt="Random Image 14"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=15" alt="Random Image 15"></div>
+    <div class="square"><img src="https://picsum.photos/100?random=16" alt="Random Image 16"></div>
   </section>
 </body>
 </html>
