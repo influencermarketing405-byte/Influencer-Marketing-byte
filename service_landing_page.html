@@ -1,158 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arturo.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
 
-  <!-- Google Fonts: MoMo Signature -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+  body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      background-color: #fff;
-      font-family: Arial, sans-serif;
-    }
+  .top-stripe {
+    background-color: #FFD700;
+    height: 3cm;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
 
-    /* Top yellow stripe */
-    .top-stripe {
-      background-color: #FFD700;
-      height: 3cm;
-      display: flex;
-      align-items: center;
-      padding-left: 0.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    }
+  .logo {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Momo Signature', cursive;
+  }
 
-    .momo-signature-regular {
-      font-family: "Momo Signature", cursive;
-      font-weight: 400;
-      font-style: normal;
-    }
+  .square-grid {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 0.8rem !important;
+    justify-items: center !important;
+    padding: 2rem !important;
+  }
 
-    .logo {
-      color: white;
-      font-size: 2.5rem;
-      letter-spacing: 0.5px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
+  .square-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 70px;
+  }
 
-    /* 4x4 grid of squares */
-    .square-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 70px);
-      gap: 1rem;
-      justify-content: center;
-      padding: 3rem;
-    }
+  .square {
+    width: 70px !important;
+    height: 70px !important;
+    border: 1px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+  }
 
-    .square {
-      width: 70px;
-      height: 70px;
-      border: 1px solid black;
-      border-radius: 0;
-      overflow: hidden;
-      transition: transform 0.2s ease;
-      background-color: #fff;
-    }
+  .square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-    .square img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .square:hover {
+    transform: translateY(-3px);
+  }
 
-    .square:hover {
-      transform: translateY(-3px);
-    }
+  .square-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.3rem;
+    width: 100%;
+    line-height: 1.1;
+  }
 
-    /* Improved title styling */
-    .square-title {
-      text-align: center;
-      font-size: 0.85rem;       /* slightly bigger */
-      margin-top: 0.3rem;
-      font-weight: 700;          /* thicker letters */
-      color: #000;               /* strong black */
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <div class="top-stripe">
-    <div class="logo momo-signature-regular">Arturo.</div>
+  .square-title span {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    color: #000;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+  }
+
+  @media (max-width: 768px) {
+    .square-item { max-width: 60px; }
+    .square { width: 60px !important; height: 60px !important; }
+    .square-title span { font-size: clamp(0.5rem, 2.5vw, 0.7rem); }
+  }
+
+  @media (max-width: 480px) {
+    .square-item { max-width: 55px; }
+    .square { width: 55px !important; height: 55px !important; }
+    .square-title span { font-size: clamp(0.45rem, 3vw, 0.65rem); }
+  }
+</style>
+
+<div class="top-stripe">
+  <div class="logo">Arturo.</div>
+</div>
+
+<section class="square-grid">
+
+  <div class="square-item">
+    <a href="#" style="text-decoration:none; color:inherit;">
+      <div class="square">
+        <img src="https://images.unsplash.com/photo-1620503374950-e295f582d487?auto=format&fit=crop&w=300&q=80" 
+             alt="Yerba Mate Leaves">
+      </div>
+      <div class="square-title">
+        <span>Yerba</span>
+        <span>Mate</span>
+      </div>
+    </a>
   </div>
 
-  <section class="square-grid">
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/180/70/70" alt="Smartphone"></div>
-      <div class="square-title">Smartphone X</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/181/70/70" alt="Wireless Earbuds"></div>
-      <div class="square-title">Wireless Earbuds</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/182/70/70" alt="Gaming Console"></div>
-      <div class="square-title">Gaming Console</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/183/70/70" alt="Smartwatch"></div>
-      <div class="square-title">Smartwatch Pro</div>
-    </div>
-
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/184/70/70" alt="DSLR Camera"></div>
-      <div class="square-title">DSLR Camera</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/185/70/70" alt="Laptop"></div>
-      <div class="square-title">Ultrabook Laptop</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/186/70/70" alt="Speaker"></div>
-      <div class="square-title">Bluetooth Speaker</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/187/70/70" alt="Drone"></div>
-      <div class="square-title">Camera Drone</div>
-    </div>
-
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/188/70/70" alt="Coffee Maker"></div>
-      <div class="square-title">Coffee Maker</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/189/70/70" alt="Fitness Tracker"></div>
-      <div class="square-title">Fitness Tracker</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/190/70/70" alt="Smart Lamp"></div>
-      <div class="square-title">Smart Lamp</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/191/70/70" alt="Electric Scooter"></div>
-      <div class="square-title">E‑Scooter</div>
-    </div>
-
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/192/70/70" alt="Backpack"></div>
-      <div class="square-title">Urban Backpack</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/193/70/70" alt="Noise Cancelling Headphones"></div>
-      <div class="square-title">NC Headphones</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/194/70/70" alt="Action Camera"></div>
-      <div class="square-title">Action Camera</div>
-    </div>
-    <div>
-      <div class="square"><img src="https://picsum.photos/id/195/70/70" alt="Portable Charger"></div>
-      <div class="square-title">Portable Charger</div>
-    </div>
-  </section>
-</body>
-</html>
+</section>
