@@ -19,7 +19,7 @@
     color: #fff;
     font-size: 2.5rem;
     letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     font-family: 'Momo Signature', cursive;
   }
 
@@ -96,16 +96,18 @@
 </div>
 
 <section class="square-grid">
-  <!-- Row 1 -->
+  <!-- Row 1 - UPDATED -->
   <div class="square-item">
-    <div class="square"><img src="https://picsum.photos/id/180/70/70" alt="Smartphone X"></div>
+    <div class="square">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Yerba_Mate_Leaves.jpg" alt="Yerba Mate">
+    </div>
     <div class="square-title">
-      <span>Smart</span>
-      <span>Phone</span>
-      <span>X</span>
+      <span>Yerba</span>
+      <span>Mate</span>
     </div>
   </div>
 
+  <!-- Everything below stays unchanged -->
   <div class="square-item">
     <div class="square"><img src="https://picsum.photos/id/181/70/70" alt="Wireless Earbuds"></div>
     <div class="square-title">
@@ -207,7 +209,7 @@
   </div>
 
   <div class="square-item">
-    <div class="square"><img src="https://picsum.photos/id/193/70/70" alt="Noise Cancel Headphones"></div>
+    <div class="square"><img src="httpsum.photos/id/193/70/70" alt="Noise Cancel Headphones"></div>
     <div class="square-title">
       <span>Noise</span>
       <span>Cancel</span>
@@ -256,11 +258,6 @@
     const items = document.querySelectorAll('.square-item');
     items.forEach((item, index) => {
       item.addEventListener('click', () => {
-        // Uncomment next two lines for random link:
-        // const randomIndex = Math.floor(Math.random() * productLinks.length);
-        // window.location.href = productLinks[randomIndex];
-
-        // Default: fixed link per product
         window.location.href = productLinks[index];
       });
     });
